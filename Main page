@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Gaia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maitree:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylemp.css">
+</head>
+<body bgcolor="whitesmoke">
+    <div class="box1">
+        <ul>        
+            <li><img class="logo1" src="Img/image0_0.jpg" alt="Tree Logo"></li>
+            <li>Green Gaia</li>
+            <li>About Us</li>
+            <li>Importance of planting trees</li>
+            <li>FAQ</li>
+            <li>Login/Sign Up</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <img class="img1" src="Img/tree.jfif" alt="Tree">
+        <p>
+            <h1>Join us plant the trees</h1> <br> 
+            <div class="desc1">
+                <span>
+                    Planting a tree is a simple yet profound act that ripples 
+                    through time, leaving a legacy for generations to come. It's an invitation to be
+                    part of a global movement, a chance to make a positive impact on the world.
+                    So, pick up a shovel, dig a hole, and watch as your small act of planting
+                    transforms into a mighty force for environmental change. Together, let's
+                    cultivate a greener, more sustainable planet—one tree at a time.
+                </span>
+            </div>
+        </p>
+        <button class="but1">Create your forest</button>
+        <p><h2>Current tree :</h2><h1>xxx,xxx,xxx</h1></p>
+    </div>
+    <div class="box3">
+        <p>
+            <h1>About us</h1> <br>
+            Standing tall and majestic, the tree reaches towards the sky with branches that form a delicate network of intricate patterns against the backdrop of lush green leaves. Its bark, weathered by the passage of time, tells tales of seasons past. The trunk, solid and resilient, serves as a sturdy foundation for the sprawling canopy above. In spring, vibrant blossoms adorn the branches, creating a spectacle of color and life. As summer arrives, the leaves provide a welcome shade, their collective rustle creating a soothing melody in the gentle breeze. In autumn, the tree transforms, exchanging its green attire for a tapestry of reds, oranges, and yellows, showering the ground with a mosaic of fallen leaves. Even in winter, when the branches stand bare, there's a quiet strength in the silhouette against the winter sky, promising the return of spring's rebirth. This tree is a silent guardian, witnessing the passage of time and seasons with an enduring grace.
+        </p>
+    </div>
+</body>
+</html>
