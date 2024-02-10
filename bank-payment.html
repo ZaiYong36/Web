@@ -1,3 +1,31 @@
+<?php
+
+$servername = 'localhost'; //127.0.0.1
+$username = 'root';
+$password = '';
+$database = 'payment_info';
+
+$connection = mysqli_connect($servername, $username, $password, $database);
+
+if($connection ===false) {
+    die("Connection failed" . mysqli_connect_error());
+} 
+
+if(isset($_POST['btnConfirm'])){
+    $name = $_POST['txtName'];
+    $cvv = $_POST['txtCVV'];
+    $card_number = $_POST['txtCardNumber'];
+    $month = $_POST['months'];
+    $year = $_POST['years'];
+
+    $query = "INSERT INTO `tblpaymentinfo`(`name`, `cvv`, `card_num`, `expiry_month`, `expiry_year`) 
+            VALUES ('$name','$cvv','$card_number','$month','$year')";
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,27 +38,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <form action="#" method="post">
     <div class="container">
         <h1>Confirm Your Payment</h1>
         <div class="first-row">
             <div class="Name">
                 <h3>Name</h3>
                 <div class="input-field">
-                    <input type="text">
+                    <input type="text" name="txtName">
                 </div>
             </div>
         </div>
             <div class="cvv">
                 <h3>CVV</h3>
                 <div class="input-field">
-                    <input type="password">
+                    <input type="password" name="txtCVV">
                 </div>
             </div>
             <div class="second-row">
                 <div class="card-number">
                     <h3>Card Number</h3>
                     <div class="input-field">
-                        <input type="text">
+                        <input type="text" name="txtCardNumber">
                     </div>
                 </div>
             </div>
@@ -72,7 +101,8 @@
                     </div>
                 </div>
             </div>
-            <a href="">Confirm</a>
+            <input type="submit" name="btnConfirm" id="btnConfirm" value="Confirm"  >
         </div>
+    </form>
 </body>
 </html>
