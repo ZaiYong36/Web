@@ -1,3 +1,9 @@
+<?php
+    require_once('connetomembdb.php');
+    $fdt="Select * FROM member";
+    $dresult = mysqli_query($conn,$fdt);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,20 +33,17 @@
         }
         #Records{
             background-color:aqua;
-            height: 100%;
             display: flex;
             justify-content: center;
         }
         #Search{
-            background-color:aqua;
-            height: 100%;
+            background-color:red;
             display: flex;
             justify-content: center;
         }
         #membtable{
             background-color: greenyellow;
             height: 100%;
-            width: 100%;
             margin: 0%;
             display: flex;
             justify-content: center;
@@ -82,51 +85,27 @@
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
-            <tr style="text-align: center;">
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxx-xxx-xxxx</td>
-                <td>xxxx@mail.com</td>
-                <td>xxx</td>
-                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
-                    <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
-                </tr>
-            <tr style="text-align: center;">
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxx-xxx-xxxx</td>
-                <td>xxxx@mail.com</td>
-                <td>xxx</td>
-                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
-                    <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
-                </tr>
-            <tr style="text-align: center;">
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxx-xxx-xxxx</td>
-                <td>xxxx@mail.com</td>
-                <td>xxx</td>
-                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
+            <tr>
+                <?php
+                    while($row=mysqli_fetch_assoc($dresult))
+                    {
+                ?>
+                <td><?php echo $row['ID'] ?></td>
+                <td><?php echo $row['First_Name'] ?></td>
+                <td><?php echo $row['Last_Name'] ?></td>
+                <td><?php echo $row['Phone_Number'] ?></td>
+                <td><?php echo $row['Email'] ?></td>
+                <td><?php echo $row['Number_of_Trees'] ?></td>
+                <td><a href="?ID=<?php echo $row['ID'] ?>">Edit</a></td>
                 <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
-            </tr>
-            <tr style="text-align: center;">
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxxx</td>
-                <td>xxx-xxx-xxxx</td>
-                <td>xxxx@mail.com</td>
-                <td>xxx</td>
-                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
-                <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
-            </tr>
+            </tr>     
+                <?php
+                    }
+                ?>
         </table>
     </div>
-    <div id="logoutnadd">
+    <div id="logout">
         <form action="logout.php" method="get"><input type="submit" name="logout" value="Log Out"></form>
-            <form action="addmember.php" method="get"><input type="submit" name="addmemb" value="Add Member"></form>
     </div>
 </body>
 </html>
