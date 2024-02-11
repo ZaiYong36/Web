@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <body background="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"></body>
+    <style>
+        #wlcomenttlfunds{
+            display: flex;
+            justify-content: space-around;
+        }
+        #Wlcome{
+            background-color: greenyellow;
+            border-radius: 20px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        #TtlFunds{
+            background-color:greenyellow;
+            border-radius: 20px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #Records{
+            background-color:aqua;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #Search{
+            background-color:aqua;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        #membtable{
+            background-color: greenyellow;
+            height: 100%;
+            width: 100%;
+            margin: 0%;
+            display: flex;
+            justify-content: center;
+        }
+        #logoutnadd{
+            background-color: rgba(255, 0, 0, 0.5)
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div id="wlcomenttlfunds">
+        <div id="Wlcome">
+            <h2>Welcome back, User</h2>
+        </div>
+        <div id="TtlFunds">
+            <h3>Total Funds Raised: xxx,xxx,xxx</h3>
+        </div>
+    </div>
+    <div id="Records">
+        <h3>Records:</h3>
+    </div>
+    <div id="Search">
+        <form action="search.php" method="get">
+            <label><h4>Search:</h4></label><input type="text"><input type="submit" name="searchtarget" value="Search">
+        </form>
+    </div><br>
+    <div id="membtable">
+        <table border="3">
+            <tr id="tblerow1">
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>No. of Tree(s)</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr style="text-align: center;">
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxx-xxx-xxxx</td>
+                <td>xxxx@mail.com</td>
+                <td>xxx</td>
+                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
+                    <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
+                </tr>
+            <tr style="text-align: center;">
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxx-xxx-xxxx</td>
+                <td>xxxx@mail.com</td>
+                <td>xxx</td>
+                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
+                    <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
+                </tr>
+            <tr style="text-align: center;">
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxx-xxx-xxxx</td>
+                <td>xxxx@mail.com</td>
+                <td>xxx</td>
+                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
+                <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxxx</td>
+                <td>xxx-xxx-xxxx</td>
+                <td>xxxx@mail.com</td>
+                <td>xxx</td>
+                <td><form action="editmemb.php" method="get"><input type="submit" name="editmemb" value="Edit"></form></td>
+                <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
+            </tr>
+        </table>
+    </div>
+    <div id="logoutnadd">
+        <form action="logout.php" method="get"><input type="submit" name="logout" value="Log Out"></form>
+            <form action="addmember.php" method="get"><input type="submit" name="addmemb" value="Add Member"></form>
+    </div>
+</body>
+</html>
