@@ -31,15 +31,29 @@
             display: flex;
             justify-content: center;
         }
+        #rbox{
+            display:flex;
+            justify-content:center;
+        }
         #Records{
             background-color:aqua;
             display: flex;
             justify-content: center;
+            border-radius:20px;
+        }
+        #sbox{
+            display:flex;
+            justify-content:center;
         }
         #Search{
             background-color:red;
             display: flex;
             justify-content: center;
+            border-radius:20px;
+        }
+        #tbox{
+            display:flex;
+            justify-content:center;
         }
         #membtable{
             background-color: greenyellow;
@@ -48,11 +62,11 @@
             display: flex;
             justify-content: center;
         }
-        #logoutnadd{
+        #logout{
             background-color: rgba(255, 0, 0, 0.5)
             height: 100%;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
         }
     </style>
 </head>
@@ -65,44 +79,50 @@
             <h3>Total Funds Raised: xxx,xxx,xxx</h3>
         </div>
     </div>
-    <div id="Records">
-        <h3>Records:</h3>
+    <div id=rbox>
+        <div id="Records">
+            <h3>Records:</h3>
+        </div>
     </div>
-    <div id="Search">
-        <form action="search.php" method="get">
-            <label><h4>Search:</h4></label><input type="text"><input type="submit" name="searchtarget" value="Search">
-        </form>
-    </div><br>
-    <div id="membtable">
-        <table border="3">
-            <tr id="tblerow1">
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-                <th>No. of Tree(s)</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-            <tr>
-                <?php
-                    while($row=mysqli_fetch_assoc($dresult))
-                    {
-                ?>
-                <td><?php echo $row['ID'] ?></td>
-                <td><?php echo $row['First_Name'] ?></td>
-                <td><?php echo $row['Last_Name'] ?></td>
-                <td><?php echo $row['Phone_Number'] ?></td>
-                <td><?php echo $row['Email'] ?></td>
-                <td><?php echo $row['Number_of_Trees'] ?></td>
-                <td><a href="?ID=<?php echo $row['ID'] ?>">Edit</a></td>
-                <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
-            </tr>     
-                <?php
-                    }
-                ?>
-        </table>
+    <div id="sbox">
+        <div id="Search">
+            <form action="search.php" method="get">
+                <label><h4>Search:</h4></label><input type="text"><input type="submit" name="searchtarget" value="Search">
+            </form>
+        </div><br>
+    </div>
+    <div id="tbox">
+        <div id="membtable">
+            <table border="3">
+                <tr id="tblerow1">
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>No. of Tree(s)</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr>
+                    <?php
+                        while($row=mysqli_fetch_assoc($dresult))
+                        {
+                    ?>
+                    <td><?php echo $row['ID'] ?></td>
+                    <td><?php echo $row['First_Name'] ?></td>
+                    <td><?php echo $row['Last_Name'] ?></td>
+                    <td><?php echo $row['Phone_Number'] ?></td>
+                    <td><?php echo $row['Email'] ?></td>
+                    <td><?php echo $row['Number_of_Trees'] ?></td>
+                    <td><a href="?ID=<?php echo $row['ID'] ?>">Edit</a></td>
+                    <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
+                </tr>     
+                    <?php
+                        }
+                    ?>
+            </table>
+        </div>
     </div>
     <div id="logout">
         <form action="logout.php" method="get"><input type="submit" name="logout" value="Log Out"></form>
