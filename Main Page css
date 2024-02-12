@@ -5,6 +5,9 @@
     border-radius: 100%;
     float: left;
 }
+.box1{
+    position: fixed;
+}
 .box1 ul {
     text-align: left;
     display: inline;
@@ -25,6 +28,7 @@
     font-size: 25px;
     font-family: 'Maitree', serif;
     cursor: pointer;
+    text-decoration: none;
 }
 .box1 ul li:hover{
    color: #a7db16;
@@ -39,9 +43,11 @@
 }
 .box2 h1{
     margin-left: 150px;
+    margin-top: 150px;
 }
 .box2 h2{
     margin-left: 150px;
+    margin-bottom: -150px;
 }
 .desc1{
     margin-left: 150px;
@@ -50,6 +56,7 @@
     float: right;
     width: 550px;
     margin-right: 50px;
+    margin-top: 100px;
 }
 .but1{
     background-color: rgba(101, 214, 146, 0.948);
@@ -77,4 +84,15 @@
     padding-bottom: 50px;
     font-family: 'Maitree', serif;
     font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    
+}
+
+a:hover{
+    color: #a7db16;
 }
