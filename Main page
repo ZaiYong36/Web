@@ -14,7 +14,7 @@
         <ul>        
             <li><img class="logo1" src="Img/image0_0.jpg" alt="Tree Logo"></li>
             <li>Green Gaia</li>
-            <li>About Us</li>
+            <li><a href="#About">About Us</a></li>
             <li>Importance of planting trees</li>
             <li>FAQ</li>
             <li>Login/Sign Up</li>
@@ -40,7 +40,7 @@
     </div>
     <div class="box3">
         <p>
-            <h1>About us</h1> <br>
+            <h1 id="About">About us</h1> <br>
             Standing tall and majestic, the tree reaches towards the sky with branches that form a delicate network of intricate patterns against the backdrop of lush green leaves. Its bark, weathered by the passage of time, tells tales of seasons past. The trunk, solid and resilient, serves as a sturdy foundation for the sprawling canopy above. In spring, vibrant blossoms adorn the branches, creating a spectacle of color and life. As summer arrives, the leaves provide a welcome shade, their collective rustle creating a soothing melody in the gentle breeze. In autumn, the tree transforms, exchanging its green attire for a tapestry of reds, oranges, and yellows, showering the ground with a mosaic of fallen leaves. Even in winter, when the branches stand bare, there's a quiet strength in the silhouette against the winter sky, promising the return of spring's rebirth. This tree is a silent guardian, witnessing the passage of time and seasons with an enduring grace.
         </p>
     </div>
