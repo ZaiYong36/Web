@@ -1,0 +1,92 @@
+.box1{
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 200px;
+    font-family: 'Maitree', serif;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+.p1{
+    margin-left: 175px;     
+    margin-top: 75px;
+    font-size: 50px;
+}
+.Name{
+    margin-left: 175px;
+    height: 50px;
+    width: 760px;
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Maitree', serif;
+}
+.Num{
+    margin-left: 175px;
+    margin-top: 25px;
+    height: 50px;
+    width: 760px;
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Maitree', serif;
+}
+.Date{
+    margin-left: 175px;
+    margin-right: 50px;
+    margin-top: 25px;
+    height: 50px;
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Maitree', serif;
+}
+.Amount{
+    margin-left: 11px;
+    height: 50px;
+    width: 350px;
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Maitree', serif;
+}
+.Bt1{
+    margin-top: 50px;
+    margin-left: 175px;
+    height: 50px;
+    width: 345px;
+    font-family: 'Maitree', serif;
+    background-color: #a7db16;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.Bt1:hover{
+    opacity: 0.8;
+}
+.Bt2{
+    margin-left: 60px;
+    height: 50px;
+    width: 355px;
+    font-family: 'Maitree', serif;
+    background-color: #a7db16;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.Bt2:hover{
+    opacity: 0.8;
+}
+
+body {
+    background-image: url("Img/Forest.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box1 {
+    opacity:0.97;
+    border-radius:5px;
+}
