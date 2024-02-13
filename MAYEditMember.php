@@ -110,7 +110,7 @@
             display:flex;
             justify-content:center;
             border-radius:20px;
-            top-padding:20px;
+            width:200;
         }
     </style>
 </head>
