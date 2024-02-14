@@ -65,23 +65,14 @@ body {
     padding: 10px 20px;
 }
 
-#ConfButton{
-    background-color: blueviolet;
-    color: white;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 18px;
-    transition: 0.5s;
-    border-radius: 10px;
-}
-
-#ConfButton:hover{
-    background-color: dodgerblue;
-}
 
 .cards img{
     width: 100px;
-
 }
+
+.error{
+    color: red;
+}
+
+
+
