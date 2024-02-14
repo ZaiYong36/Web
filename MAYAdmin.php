@@ -1,5 +1,5 @@
 <?php
-    require_once('MAYDbConnect.php');
+    include('MAYDbConnect.php');
     $tabledata="Select * FROM member";
     $displaymemb = mysqli_query($conn,$tabledata);
 ?>
@@ -41,8 +41,11 @@
             justify-content: center;
             border-radius:20px;
         }
-        #sbox{
+        #sntbox{
             display:flex;
+            justify-content:center;
+        }
+        #sbox{
             justify-content:center;
         }
         #Search{
@@ -50,6 +53,9 @@
             display: flex;
             justify-content: center;
             border-radius:20px;
+        }
+        #searchtable{
+            background-color:red;
         }
         #tbox{
             display:flex;
@@ -84,46 +90,89 @@
             <h3>Records:</h3>
         </div>
     </div>
-    <div id="sbox">
-        <div id="Search">
-            <form action="" method="get">
-                <label><h4>Search:</h4></label>
-                <input type="text" name="searchtarget" value="<?php if(isset($_get['searchtarget'])) {echo $_get['searchtarget'];} ?>" placeholder="Please enter a name">
-                <button type="submit" class="btn btn-primary">Search</button>
-            </form>
-        </div><br>
-    </div>
-    <div id="tbox">
-        <div id="membtable">
-            <table border="3">
-                <tr id="tblerow1">
-                    <th>ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>No. of Tree(s)</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                <tr>
-                    <?php
-                        while($row=mysqli_fetch_assoc($displaymemb))
-                        {
-                    ?>
-                    <td><?php echo $row['ID'] ?></td>
-                    <td><?php echo $row['First_Name'] ?></td>
-                    <td><?php echo $row['Last_Name'] ?></td>
-                    <td><?php echo $row['Phone_Number'] ?></td>
-                    <td><?php echo $row['Email'] ?></td>
-                    <td><?php echo $row['Number_of_Trees'] ?></td>
-                    <td><a href="MAYEditMember.php?ID=<?php echo $row['ID'] ?>">Edit</a></td>
-                    <td><form action="deletememb.php" method="get"><input type="submit" name="deletememb" value="Delete"></form></td>
-                </tr>     
-                    <?php
-                        }
-                    ?>
-            </table>
+    <div id="sntbox" class="container">
+        <div id="sbox">
+            <div id="Search">
+                <form action="" method="GET">
+                    <label><h4>Search:</h4></label>
+                    <input type="text" name="searchtarget" value="<?php if(isset($_GET['searchtarget'])) {echo $_GET['searchtarget'];} ?>" placeholder="Please enter a name">
+                    <button type="submit" class="btn btn-primary" name="searchbttn">Search</button>
+                </form>
+            </div><br>
+            <div id="searchtable" class="container">
+                <table border="3">
+                    <tr>
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>No. of Tree(s)</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <?php
+                            if(isset($_GET["searchbttn"])){
+                                $targetmember=$_GET["searchtarget"];
+                                $searchresult="SELECT * FROM member WHERE CONCAT(ID,First_Name,Last_Name,Phone_Number,Email,Number_of_Trees) LIKE '%".$targetmember."%'";
+                                $displaysearch=mysqli_query($conn,$searchresult);
+
+                                if(mysqli_num_rows($displaysearch)>0){
+                                    while($resultdata =mysqli_fetch_assoc($displaysearch)){
+
+                                        ?>
+                                        <tr>
+                                            <td><?=$resultdata["ID"];?></td>
+                                            <td><?=$resultdata["First_Name"];?></td>
+                                            <td><?=$resultdata["Last_Name"];?></td>
+                                            <td><?=$resultdata["Phone_Number"];?></td>
+                                            <td><?=$resultdata["Email"];?></td>
+                                            <td><?=$resultdata["Number_of_Trees"];?></td>
+                                        </tr>
+                                        <?php
+                                    }
+                                }else{
+                                    echo "<tr><td colspan='8'>No records found</td></tr>";
+                                }
+                            }
+                        ?>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="tbox">
+            <div id="membtable">
+                <table border="3">
+                    <tr id="tblerow1">
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>No. of Tree(s)</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <?php
+                            while($row=mysqli_fetch_assoc($displaymemb))
+                            {
+                        ?>
+                        <td><?php echo $row['ID'] ?></td>
+                        <td><?php echo $row['First_Name'] ?></td>
+                        <td><?php echo $row['Last_Name'] ?></td>
+                        <td><?php echo $row['Phone_Number'] ?></td>
+                        <td><?php echo $row['Email'] ?></td>
+                        <td><?php echo $row['Number_of_Trees'] ?></td>
+                        <td><a href="MAYEditMember.php?ID=<?php echo $row['ID'] ?>">Edit</a></td>
+                        <td><a href="MAYDelete.php?ID=<?php echo $row['ID'] ?>">Delete</a></td>
+                    </tr>     
+                        <?php
+                            }
+                        ?>
+                </table>
+            </div>
         </div>
     </div>
     <div id="logout">
