@@ -57,7 +57,7 @@ if (isset($_POST['btnConfirm'])) {
         }
     }
 
-if(isset($_POST['btnConfirm'])){
+if(isset($_POST['btnConfirm'], $namesucess, $cvvsuccess, $cardnumber_success )){
     $name = $_POST['txtName'];
     $cvv = $_POST['txtCVV'];
     $card_number = $_POST['txtCardNumber'];
@@ -68,6 +68,7 @@ if(isset($_POST['btnConfirm'])){
             VALUES ('$name','$cvv','$card_number','$month','$year')"; 
 
     if (mysqli_query($connection,$query)) {
+        /// Used JavaScript
     echo "<script> alert('Payment successfully')</script>";
     } else {
     echo "<script> alert('Payment unsuccessfully :C')</script>" . mysqli_error($connection);
@@ -177,3 +178,4 @@ mysqli_close($connection);
     </form>
 </body>
 </html>
+
