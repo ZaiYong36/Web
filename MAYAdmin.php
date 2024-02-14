@@ -17,7 +17,7 @@
             justify-content: space-around;
         }
         #Wlcome{
-            background-color: greenyellow;
+            background-color: rgb(128,255,0,0.8);
             border-radius: 20px;
             height: 100%;
             display: flex;
@@ -25,7 +25,7 @@
             
         }
         #TtlFunds{
-            background-color:greenyellow;
+            background-color:rgb(128,255,0,0.8);
             border-radius: 20px;
             height: 100%;
             display: flex;
@@ -43,26 +43,26 @@
         }
         #sntbox{
             display:flex;
-            justify-content:center;
+            justify-content:space-around;
         }
         #sbox{
             justify-content:center;
         }
         #Search{
-            background-color:red;
+            background-color:rgb(255,0,0,0.9);
             display: flex;
             justify-content: center;
             border-radius:20px;
         }
         #searchtable{
-            background-color:red;
+            background-color:rgb(255,255,255,0.8);
         }
         #tbox{
             display:flex;
             justify-content:center;
         }
         #membtable{
-            background-color: greenyellow;
+            background-color: rgb(128,255,0,0.8);
             height: 100%;
             margin: 0%;
             display: flex;
@@ -73,6 +73,8 @@
             height: 100%;
             display: flex;
             justify-content: center;
+            position: relative;
+            top:50px;
         }
     </style>
 </head>
