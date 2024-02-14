@@ -24,68 +24,32 @@
             justify-content:center;
         }
         #bannertext{
-            background-color:red;
+            border-radius: 10px 10px 0 0;
+            color:red;
+            background-color: rgb(51,255,51,0.8);
             display:flex;
             justify-content:center;
         }
-        #infobox{
-            justify-content:center;
-        }
-        #IDbox{
+        #box1{
             display:flex;
             justify-content:center;
-            
+        }
+        #box2{
+            background-color:rgb(255,255,255,0.8);
+            juatify-content:center;
+            width:300px;
         }
         #ID{
-            background-color:red;
-            display:flex;
-            justify-content:center;
-        }
-        #fnamebox{
-            display:flex;
-            justify-content:center;
         }
         #fname{
-            background-color:red;
-            display:flex;
-            justify-content:center;
-            
-        }
-        #lnamebox{
-            display:flex;
-            justify-content:center;
         }
         #lname{
-            background-color:red;
-            display:flex;
-            justify-content:center;
-        }
-        #phbox{
-            display:flex;
-            justify-content:center;
         }
         #ph{
-            background-color:red;
-            display:flex;
-            justify-content:center;
-        }
-        #emailbox{
-            display:flex;
-            justify-content:center;
         }
         #email{
-            background-color:red;
-            display:flex;
-            justify-content:center;
-        }
-        #treenumbox{
-            display:flex;
-            justify-content:center;
         }
         #treenum{
-            background-color:red;
-            display:flex;
-            justify-content:center;
         }
         #logoutbutton{
             display:flex;
@@ -106,7 +70,7 @@
             justify-content:center;
         }
         #Returnbutton{
-            background-color:white;
+            background-color:rgb(255,255,255,0.8);
             display:flex;
             justify-content:center;
             border-radius:20px;
@@ -121,40 +85,31 @@
                 <h2>Member Information</h2>
             </div>
         </div>
-        <div id="infobox">
-            <div id="idbox">
+        <div id="box1" class="container">
+            <div id="box2" class="container">
                 <div id="id">
                     <h4>ID:</h4><input type="text" name="idinput" value="<?php echo $row['ID'];?>">
                 </div>
-            </div>
-            <div id="fnamebox">
                 <div id="fname">
                     <h4>First Name:</h4><input type="text" name="fnameinput" value="<?php echo $row['First_Name'];?>">
                 </div>
-            </div>
-            <div id="lnamebox">
                 <div id="lname">
                     <h4>Last Name:</h4><input type="text" name="lnameinput" value="<?php echo $row['Last_Name'];?>">
                 </div>
-            </div>
-            <div id="phbox">
                 <div id="ph">
                     <h4>Phone Number:</h4><input type="text" name="phinput" value="<?php echo $row['Phone_Number'];?>">
                 </div>
-            </div>
-            <div id="emailbox">
                 <div id="email">
                     <h4>Email:</h4><input type="text" name="emailinput" value="<?php echo $row['Email'];?>">
                 </div>
-            </div>
-            <div id="treenumbox">
                 <div id="treenum">
                     <h4>Number of Tree(s):</h4><input type="text" name="treenuminput" value="<?php echo $row['Number_of_Trees'];?>">
                 </div>
             </div>
-            <div id="logoutbutton">
-                <input type="submit" value="Update" name="updatetarget">
-            </div>
+        </div>
+        <div id="logoutbutton">
+            <input type="submit" value="Update" name="updatetarget">
+        </div>
         </div>
     </form>
     <div>
