@@ -8,8 +8,24 @@
 
 </head>
 <style>
+    #box2{
+        display: flex;
+        justify-content:center;
+    }
+    #box1{
+        color:blue;
+        border-radius:10px 10px 0 0;
+        background-color:rgb(51,255,255,0.7);
+        display: flex;
+        justify-content:center;
+    }
+    #sttmnt1{
+        color:greenyellow;
+        display:flex;
+        justify-content: center;
+    }
     #qr1{
-        background-color: aqua;
+        background-color: rgb(51,255,255,0.7);
         width: 400px;
         height: 200px;
         text-align: center;
@@ -18,17 +34,23 @@
         position: relative;
         left: 350px;
 }
-#bttonrtrn{
-    position: relative;
-    left: 350px;
+    #bttonrtrn{
+        position: relative;
+        left: 350px;
 }
-#bttonrfrshqr{
-    position: relative;
-    left: 952px;
+    #bttonrfrshqr{
+        position: relative;
+        left: 952px;
 }
 </style>
 <body>
-    <h1 style="color:greenyellow;">Please Scan The QR Code To Make Payment</h1>
+    <div id="box2">
+        <div id="box1">
+            <div id="Sttmnt1">
+                <h1>Please Scan The QR Code To Make Payment</h1>
+            </div>
+        </div>
+    </div>
     <div id="qr1">
         QR Code
     </div>
