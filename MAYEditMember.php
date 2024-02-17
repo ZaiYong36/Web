@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div id="logoutbutton">
+        <div id="updatestatusbox">
             <input type="submit" value="Update" name="updatetarget">
         </div>
         </div>
