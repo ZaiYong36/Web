@@ -3,7 +3,7 @@
     margin-right: 200px;
     background-color: white;
     padding-top: 10px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     font-family: 'Maitree', serif;
     opacity: 0.5;
     border-radius: 5px;
@@ -30,19 +30,12 @@
     text-align: center;
     font-family: 'Maitree', serif;
 }
-.Date{
+
+.Amount{
     margin-left: 175px;
-    margin-right: 50px;
     margin-top: 25px;
     height: 50px;
-    font-size: 28px;
-    text-align: center;
-    font-family: 'Maitree', serif;
-}
-.Amount{
-    margin-left: 11px;
-    height: 50px;
-    width: 350px;
+    width: 760px;
     font-size: 28px;
     text-align: center;
     font-family: 'Maitree', serif;
@@ -56,7 +49,7 @@
     background-color: #a7db16;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 28px;
     border-radius: 2px;
     cursor: pointer;
     transition: opacity 0.3s;
@@ -72,7 +65,7 @@
     background-color: #a7db16;
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 28px;
     border-radius: 2px;
     cursor: pointer;
     transition: opacity 0.3s;
