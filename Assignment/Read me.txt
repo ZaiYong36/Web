@@ -1,1 +1,0 @@
-Please open a database named wdt_assignment before you import the sql :)
