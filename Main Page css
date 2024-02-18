@@ -4,6 +4,7 @@
     margin-top: -25px;
     border-radius: 100%;
     float: left;
+    margin-right: 20px;
 }
 .box1{
     position: fixed;
@@ -22,7 +23,7 @@
     margin-right: 2.5px;
     margin-top: 10px;
     position: relative;
-    padding: 10px 50px;
+    padding: 10px 60px;
     transition: color 0.3s;
     vertical-align: top;
     font-size: 25px;
@@ -37,9 +38,8 @@
 .box2 {
     background-color: white;
     padding-top: 10px;
-    padding-bottom: 50px;
     font-family: 'Maitree', serif;
-    font-size: 25px;
+    font-size: 28px;
 }
 .box2 h1{
     margin-left: 150px;
@@ -59,31 +59,40 @@
     margin-top: 100px;
 }
 .but1{
-    background-color: rgba(101, 214, 146, 0.948);
+    background-color: rgb(141, 216, 87);
     margin-left: 150px;
-    color: black;
+    color: rgb(74, 74, 74);
     font-family: 'Maitree', serif;
-    font-size: 20px;
+    font-size: 40px;
     border-radius: 4px;
     text-align: center;
     border: none;
     transition: opacity 0.3s;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
     cursor: pointer;
 }
 .but1:hover{
     opacity: 0.85;
 }
 .box3 {
-    background-color: whitesmoke;
-    margin-left: 150px;
-    padding-top: 10px;
-    padding-bottom: 50px;
+    margin-top: -100px;
+    background-color: white;
+    padding-top: 25px;
+    padding-bottom: 40px;
     font-family: 'Maitree', serif;
     font-size: 25px;
+    box-shadow: rgba(179, 172, 168, 0.55) 0px 0px 15px -4px;
+}
+.box3 h1{
+    margin-bottom: -30px;
+}
+
+.desc2{
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 a{
@@ -96,3 +105,51 @@ a{
 a:hover{
     color: #a7db16;
 }
+
+.countdown{
+background-color: rgb(141, 216, 87);
+color: white;
+box-shadow: rgba(179, 172, 168, 0.55) 0px 0px 15px -4px;
+}
+
+#demo{
+    font-size: 90px;
+    margin-left: 390px;
+    margin-top: -50px;
+    font-family: 'Maitree', serif;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+.box4{
+    background-color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Maitree', serif;
+    font-size: 25px;
+}
+.desc3{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.box5{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Maitree', serif;
+    font-size: 25px;
+}
+.box5 h1{
+    margin-bottom: -30px;
+}
+
+.box5 b{
+    font-size: 35px;
+}
+
+.desc4{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
