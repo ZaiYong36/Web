@@ -100,7 +100,7 @@ body {
 <body>
     <div class="box1">    
         <form action="bank.php" method="post">
-            <p class="p1"><b>Pay with card</b></p>
+            <p class="p1"><b>Pay with online banking</b></p>
             <input class="Name" placeholder="&nbsp; Account Name" type="text" name="tname" required><br>
             <input class="Num" placeholder="&nbsp; Account Number" type="text" name="tnum" required><br>
             <input class="Amount" placeholder="Amount" type="text" name="tamount" required><br>
