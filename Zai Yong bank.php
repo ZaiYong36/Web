@@ -2,7 +2,7 @@
     $server = 'localhost';  //127.0.0.1
     $user = 'root'; //default user
     $password = '';
-    $database = 'dummy';
+    $database = 'wdt_assignment';
 
     $connection = mysqli_connect($server,$user,$password,$database);
     
@@ -15,17 +15,13 @@
     if(isset($_POST['btnregister'])){
         $name = $_POST['tname'];
         $num = $_POST['tnum'];
-        $date = $_POST['tdate'];
         $amount = $_POST['tamount'];
     
-        $sqlnum="SELECT * FROM `payment` WHERE `number` = '$num'";
+        $sqlnum="SELECT * FROM `bank_pay` WHERE `number` = '$num'";
         $results = mysqli_query($connection,$sqlnum);
 
-    if (mysqli_num_rows($results) == 1 ) {
-        $row = mysqli_fetch_assoc($results);
-        echo 'Credit card number Exists!';
-    }else {
-         $sql = "INSERT INTO `payment`(`name`, `number`, `date`, `amount`) VALUES ('$name','$num','$date','$amount')";
+
+         $sql = "INSERT INTO `bank_pay`(`name`, `number`, `amount`) VALUES ('$name','$num','$amount')";
 
         if(mysqli_query($connection,$sql)){
             echo 'Registered Successfully!';
@@ -33,7 +29,7 @@
             echo 'Fail to Register!';
         }
     }
-}
+
 
 
 mysqli_close($connection);
@@ -61,15 +57,33 @@ body {
     opacity:0.97;
     border-radius:5px;
 }
+.Amount{
+    margin-left: 175px;
+    margin-top: 25px;
+    height: 50px;
+    width: 760px;
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Maitree', serif;
+}
+.box1{
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 100px;
+    font-family: 'Maitree', serif;
+    opacity: 0.98;
+    border-radius: 5px;
+}
 </style>
 </head>
 <body background-image: url("Img/Forest.avif")>
     <div class="box1">    
         <form action="#" method="post">
             <p class="p1"><b>Pay with card</b></p>
-            <input class="Name" placeholder="&nbsp; Name" type="text" name="tname" ><br>
-            <input class="Num" placeholder="&nbsp; Number" type="text" name="tnum"><br>
-            <input class="Date" placeholder="YYYY/MM/DD" type="text" name="tdate">
+            <input class="Name" placeholder="&nbsp; Account Name" type="text" name="tname" ><br>
+            <input class="Num" placeholder="&nbsp; Account Number" type="text" name="tnum"><br>
             <input class="Amount" placeholder="Amount" type="text" name="tamount"><br>
             <button class="Bt1">Cancel</button>
             <button class="Bt2" type="submit" value="register" name="btnregister">Pay</button>
