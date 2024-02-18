@@ -24,9 +24,9 @@
          $sql = "INSERT INTO `bank_pay`(`name`, `number`, `amount`) VALUES ('$name','$num','$amount')";
 
         if(mysqli_query($connection,$sql)){
-            echo 'Registered Successfully!';
+            echo "<script> alert('Payment successfully')</script>";
         }else{
-            echo 'Fail to Register!';
+            echo "<script> alert('Payment failed')</script>";
         }
     }
 
